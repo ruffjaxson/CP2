@@ -70,7 +70,7 @@ input {
 }
 
 .crawler {
-  width: 40%;
+  width: 65%;
   padding-top: 20px;
 }
 
@@ -86,6 +86,10 @@ input {
   background: rgba(0, 0, 0, 0.7);
 }
 .footer-link:visited {
+  color: #ffffff;
+}
+
+.footer-link {
   color: #ffffff;
 }
 
