@@ -18,21 +18,63 @@ document.getElementById("woo").addEventListener("click", function(event) {
        let results = "";
 
       if (type === 'films'){
-        results += '<h2>You have chosen: ' + json.title + " </h2>";
+        if (number < 1 || number > 6) {
+          results += '<h1>PLEASE ENTER VALID OPTION</h1>';
+          document.getElementById("fetchResults").innerHTML = results;
+          return;
+        }
+        results += '<hr><h2>You have chosen: ' + json.title + " </h2>";
+          // if (json.title === 'undefined'){
+          //   results += '<h3>FOUND UNDEFINED ' +  "</h3>";
+          // }
         results += '<h3>Episode ' + json.episode_id + "</h3>";
         results += '<h4>Directed by ' + json.director + "</h4>";
         results += '<h4>Produced by ' + json.producer + "</h4>";
-
         results += '<div class="crawler"><p>' + json.opening_crawl + "</p></div>";
       }
       if (type === 'people'){
-        results += '<h2>You have chosen: ' + json.name + " </h2>";
+        if (number < 1 || number > 83) {
+          results += '<h1>PLEASE ENTER VALID OPTION</h1>';
+          document.getElementById("fetchResults").innerHTML = results;
+          return;
+        }
+        results += '<hr><h2>You have chosen: ' + json.name + " </h2>";
         results += '<h4>Gender: ' + json.gender + "</h4>";
-        results += '<h4>Height: ' + json.height + "</h4>";
+        results += '<h4>Height: ' + json.height + " cm</h4>";
         results += '<h4>Hair color: ' + json.hair_color + "</h4>";
         results += '<h4>Birth year: ' + json.birth_year + "</h4>";
         results += '<h4>Skin color: ' + json.skin_color + '</h4>';
       }
+      if (type === 'planets'){
+        if (number < 1 || number > 60) {
+          results += '<h1>PLEASE ENTER VALID OPTION</h1>';
+          document.getElementById("fetchResults").innerHTML = results;
+          return;
+        }
+        results += '<hr><h2>You have chosen: ' + json.name + " </h2>";
+        results += '<h4>Diameter: ' + json.diameter + " km</h4>";
+        results += '<h4>Rotation Period (Length of Day): ' + json.rotation_period + " hours</h4>";
+        results += '<h4>Orbital Period (Length of Year): ' + json.orbital_period + " days</h4>";
+        results += '<h4>Surface Water: ' + json.surface_water + " %</h4>";
+        results += '<h4>Population: ' + json.population + '</h4>';
+        results += '<h4>Climate: ' + json.climate + '</h4>';
+        results += '<h4>Terrain: ' + json.terrain + '</h4>';
+      }
+      if (type === 'species'){
+        if (number < 1 || number > 37) {
+          results += '<h1>PLEASE ENTER VALID OPTION</h1>';
+          document.getElementById("fetchResults").innerHTML = results;
+          return;
+        }
+        results += '<hr><h2>You have chosen: ' + json.name + " </h2>";
+        results += '<h4>Classification: ' + json.classification + "</h4>";
+        results += '<h4>Average Height: ' + json.average_height + " cm</h4>";
+        results += '<h4>Average Lifespan: ' + json.average_lifespan + " years</h4>";
+        results += '<h4>Hair Colors: ' + json.hair_colors + "</h4>";
+        results += '<h4>Skin Colors: ' + json.skin_colors + '</h4>';
+        results += '<h4>Spoken language: ' + json.language + '</h4>';
+      }
+
       document.getElementById("fetchResults").innerHTML = results;
      });
 

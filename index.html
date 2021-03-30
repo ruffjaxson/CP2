@@ -5,45 +5,51 @@
   <meta charset="utf-8" />
   <title>Creative Project 2</title>
   <link rel="stylesheet" href="/styles.css"/>
-  <link href="https://allfont.net/allfont.css?fonts=star-jedi" rel="stylesheet" type="text/css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Roboto:wght@900&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
 
   <div class="menu-container">
-    <h1>Star Wars</h1>
+    <h1>STAR WARS</h1>
   </div>
 
   <div class='main-container'>
       <form class="pure-form" <fieldset>
       <p></p>
-      <legend>Choose what Star Wars feature you'd like to learn about:</legend>
+      <h3>Choose what Star Wars feature you'd like to learn about:</h3>
       <select id="type">
         <option value="films">Films</option>
         <option value="people">People</option>
         <option value="planets">Planets</option>
         <option value="species">Species</option>
-        <option value="starships">Starships</option>
-        <option value="vehicles">Vehicles</option>
-        <option value="random">(Random)</option>
       </select>
       <p></p>
       <br>
-      <legend>Enter any whole number:</legend>
-      <input placeholder="number" id="number">
+      <h3>Enter any number in the following ranges:</h3>
+      <p class="ranges"><em>Films: 1-6</em></p>
+      <p class="ranges"><em>People: 1-83</em></p>
+      <p class="ranges"><em>Planets: 1-60</em></p>
+      <p class="ranges"><em>Species: 1-37</em></p>
+
+      <input placeholder="Number" id="number">
       <br>
       <button id="woo" class="pure-button pure-button-primary">Woo!</button>
       </fieldset>
     </form>
     <div id='fetchResults'></div>
+    <div class='footer'>
+          <div class='footer-content'>
+            <a class='footer-link' href='https://github.com/ruffjaxson/CP2'>GitHub Repository</a>
+          </div>
+        </div>
   </div>
 
-  <div class='footer'>
-        <div class='footer-content'>
-          <a class='footer-link' href='https://github.com/ruffjaxson/CP2'>GitHub Repository</a>
-        </div>
-      </div>
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
   <script text="type/javascript" src="/script.js">
